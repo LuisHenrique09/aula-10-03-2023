@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Calculadora</title>
+
+    <style>
+        body {
+            background-color: rgb(82, 200, 145);
+        }
+    </style>
+
+</head>
+<body>
+    <h1>Calculadora</h1>
+    <form>
+        <input id="num1" type="text"></input>
+        <input id="num2" type="text"></input>
+        <button type="button" onclick="somar()"> Somar</button>
+        <input id="resultado" type="text" disabled></input>
+    </form>
+
+    <script>
+        function somar(){
+            var num1, num2, resultado;
+        num1 = parseFloat(document.getElementById("num1").value);
+        num2 = parseFloat(document.getElementById("num2").value);
+
+        resultado = num1 + num2;
+
+        document.getElementById("resultado").value = resultado;
+
+        }
+    </script>
+
+
+</body>
+</html>
