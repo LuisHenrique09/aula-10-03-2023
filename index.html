@@ -1,10 +1,11 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
+    <link rel="stylesheet" href="better.css">
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Calculadora 2.0</title>
+    <title>Calculadora</title>
 
     <style>
         body {
@@ -18,32 +19,36 @@
     <form>
         <input id="num1" type="text"></input>
         <input id="num2" type="text"></input>
-        <button type="button" onclick="somar()"> Somar</button>
-        <button type="button" onclick="subtrair()"> subtrair</button>
+        <button type="button" onclick="operacao('+')"> +</button>
+        <button type="button" onclick="operacao('-')"> -</button>
+        <button type="button" onclick="operacao('*')"> *</button>
+        <button type="button" onclick="operacao('/')"> /</button>
         <input id="resultado" type="text" disabled></input>
     </form>
 
     <script>
-        function somar(){
+        function operacao(op){
             var num1, num2, resultado;
         num1 = parseFloat(document.getElementById("num1").value);
         num2 = parseFloat(document.getElementById("num2").value);
 
-        resultado = num1 + num2;
-
-        document.getElementById("resultado").value = resultado;
-
+        if (op =='+'){
+            resultado = num1 + num2;
         }
 
-        function subtrair(){
-            var num1, num2, resultado;
-        num1 = parseFloat(document.getElementById("num1").value);
-        num2 = parseFloat(document.getElementById("num2").value);
+        if (op =='-'){
+            resultado = num1 - num2;
+        }
 
-        resultado = num1 - num2;
+        if (op =='*'){
+            resultado = num1 * num2;
+        }
+
+        if (op =='/'){
+            resultado = num1 / num2;
+        }
 
         document.getElementById("resultado").value = resultado;
-
         }
     </script>
 
