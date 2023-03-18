@@ -9,22 +9,32 @@
     <link rel="stylesheet" href="css/styles.css" />
 
     <style>
-        body {
-            background-color: rgb(82, 200, 145);
-        }
+        
     </style>
 
 </head>
 <body>
     <h1>Calculadora</h1>
     <form>
+
+        <br/>
         <input id="num1" type="text"></input>
+        <br/>
+
+        <br/>
         <input id="num2" type="text"></input>
+        <br/>
+
+        <br/>
+        <input id="resultado" type="text" disabled></input>
+        <br/>
+
+        <br/>
+        <br/>
         <button type="button" onclick="operacao('+')"> +</button>
         <button type="button" onclick="operacao('-')"> -</button>
         <button type="button" onclick="operacao('*')"> *</button>
         <button type="button" onclick="operacao('/')"> /</button>
-        <input id="resultado" type="text" disabled></input>
     </form>
 
     <script>
